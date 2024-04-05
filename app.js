@@ -1,9 +1,13 @@
-const loginInput = document.querySelector("input")
-const loginButton = document.querySelector("button")
+const h1 = document.querySelector("div.hello:first-child  h1");
 
-function handleLoginButtonClick {
-    cnosnole.dir(loginInput.value);
-    console.log("click!!");
+function handleTittleClick() {
+    const currentColor = h1.style.color = "blue" ;
+    let newColor;
+    if (currentColor === "blue") {
+        newColor = "tomato";
+    }
+    else {
+        newColor = "blue";
+    }
+    h1.style.color = newColor;
 }
-
-loginButton.addEventListener("click", handleLoginButtonClick)
