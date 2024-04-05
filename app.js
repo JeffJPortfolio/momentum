@@ -1,30 +1,15 @@
-const h1 = document.querySelector("div.hello:first-child h1") ;
+const loginForm = document.getElementById( "login-form" );
+const loginInput = loginForm.querySelector("input") ;
+const loginButton = loginForm.querySelector("button") ;
 
-function handleTitleClick() {
-    console.log("title was clicked!") ;
-    h1.style.color = "blue"
+function handLoginButonClick() {
+    const value = loginInput.value ;
+    if (value === "" ) {
+        alert("Please write your name.") ;
+    } else if (value.length > 15){
+        alert("Your name is too long.")
+    } else {
+
+    }
 }
 
-function handleMouseEnter() {
-    h1.innerText = "Mouse is here"
-}
-
-function handleMouseLeave() {
-    h1.innerText = "Mouse is gone"
-}
-
-function handleWindowResize() {
-    document.body.style.backgroundColor = "tomato" ;
-}
-
-function handleWindowCopy() {
-    alert("copy!")
-}
-
-//title.addEventListener("click", handleTitleClick) ;
-h1.onclick = handleTitleClick ;
-h1.addEventListener("mouseenter", handleMouseEnter);
-h1.addEventListener("mouseleave", handleMouseLeave);
-
-window.addEventListener("resize", handleWindowResize) ;
-window.addEventListener("copy", handleWindowCopy);
