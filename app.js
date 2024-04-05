@@ -1,30 +1,26 @@
-const h1 = document.querySelector("div.hello:first-child h1") ;
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
 
-function handleTitleClick() {
-    console.log("title was clicked!") ;
-    h1.style.color = "blue"
+const link = document.querySelector("a") ;
+
+function onLogInSubmit(event) {
+    event.preventDefault();
+    loginForm.classList.ad
+
+    const username = loginInput.value;
+    console.log(username);
+
 }
 
-function handleMouseEnter() {
-    h1.innerText = "Mouse is here"
+function handleLinkClick(event) {
+    event.preventDefault(); 
+    loginForm.classList.add("hidden");
+    const username = loginInput.value;
+    console.log(username) ;
+    greeting.innerText = "Hello" + username 
 }
 
-function handleMouseLeave() {
-    h1.innerText = "Mouse is gone"
-}
+loginForm.addEventListener("submit", onLogInSubmit);
+link.addEventListener("click", handleLinkClick);
 
-function handleWindowResize() {
-    document.body.style.backgroundColor = "tomato" ;
-}
 
-function handleWindowCopy() {
-    alert("copy!")
-}
-
-//title.addEventListener("click", handleTitleClick) ;
-h1.onclick = handleTitleClick ;
-h1.addEventListener("mouseenter", handleMouseEnter);
-h1.addEventListener("mouseleave", handleMouseLeave);
-
-window.addEventListener("resize", handleWindowResize) ;
-window.addEventListener("copy", handleWindowCopy);
