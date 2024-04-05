@@ -14,7 +14,7 @@ function onLoginSubmit(event) {
 }
 
 function painGreeting(username) {
-    greeting.innerText = 'Hello ${savedUsername}' 
+    greeting.innerText = `Hello ${savedUsername}` 
     greeting.classList.remove(HIDDEN_CLASSNAME) ;;
 }
 
